@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script text="text/javascript" src="Test.js"></script>
+<div ng-controller="myInput" hidden>
+    <input type="text" ng-model="name">
+    <input type="text" ng-model="lastname">
+    <input type="text" ng-model="age">
+    <button ng-click="e()">click</button>
+</div>
+
+
+
+<div ng-controller="mySelect">
+   <p> Նյութ</p>  <select ng-model="model1" ng-options="option.value for option in options"  ng-change="doSomething(model1)" >
+    <option value="" >--Chose Type--</option>
+</select>
+    <p>Հաստություն</p>  <input type="text" ng-model="thickness">
+
+    <p>  Լայնք</p>
+    <input type="text" ng-model="lenght">
+    <p>Երկարություն</p>
+    <input type="text" ng-model="wide">
+    <p>Քանակ</p>
+    <input type="text" ng-model="count"><br>
+    <button ng-click="do()">SAVE</button>
+    {{all}}
+</div>
+
+<br>
+<br>
+
+
+<script text="text/javascript" src="Test.js"></script>
+</body>
+</html>
